@@ -23,7 +23,7 @@ nav, ul {
 }
 
 ul > li:first-of-type {
-	padding-left: 28em;
+	padding-left: 30em;
 }
 
 nav {
@@ -66,7 +66,6 @@ section.active{
 	float: left;
 	width: 30%;
 	height:29em;
-	/*margin-left: 1em;*/
 }
 
 img{

@@ -1,8 +1,9 @@
-// namespace
+// namespace object
 var movieApp = movieApp || {};
 
 window.onload = function(){
 
+	// controller function
 	movieApp.controller = {
 		init:function(){
 			movieApp.router.init();
@@ -14,6 +15,7 @@ window.onload = function(){
 		location: "http://dennistel.nl/movies"
 	};
 
+	// router object
 	movieApp.router = {
 		init : function(){
 			routie({
@@ -43,16 +45,15 @@ window.onload = function(){
 			Transparency.render(document.querySelector(".movies"), movieApp.content.movies, movieApp.movieDirectives);
 		},
 		toggle: function (show, hide) {
-			var show = queryUtils.getOne("." + show);
-			var hide = queryUtils.getOne("." + hide);
+			var show = utilities.getOne("." + show);
+			var hide = utilities.getOne("." + hide);
 			show.classList.add('active');
 			hide.classList.remove('active');			
 		} 
 	};
 
 
-
-	var queryUtils = {
+	var utilities = {
 		getOne: function(el){
 			return document.querySelector(el);
 		},
@@ -92,7 +93,7 @@ window.onload = function(){
   	};
 
   	if (!localStorage.getItem("movies")) {
-		console.log("Data ophalen en in localstorage plaatsen");
+		console.log("Retrieving data for localstorage");
 		xhr.trigger("get", movieApp.config.location, function (e) {
 			localStorage.setItem("movies", e);	
 		}, null);
@@ -102,19 +103,4 @@ window.onload = function(){
 	movieApp.controller.init();
 
 };
-
-// self invoking..
-(function(){
-	
-	
-
-
-
-
-})();
-
-// Render in de 'about'-methode en 'movies'-methode met Transparency de corresponderende data uit oefening 12.1 in de juiste sectie van de pagina.
-// Roep in de 'init'-methode van het 'sections'-object de 'about'-methode en 'movies'-methode aan
-// Roep in de 'init'-methode van het 'controller'-object, de 'init'-methode van het 'sections'-object aan
-
 
