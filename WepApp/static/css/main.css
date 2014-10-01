@@ -1,0 +1,75 @@
+body {
+	font-family: Garamond;
+	background-color: #e33;
+}
+
+a {
+	text-decoration: none;
+	color: #E8B94D;
+	font-size: 3em;
+}
+
+h1 {
+	font-size: 1.4em;
+}
+
+li {
+	list-style: none;
+}
+
+nav, ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul > li:first-of-type {
+	padding-left: 28em;
+}
+
+nav {
+	width:100%;
+}
+
+nav > ul > li {
+	width: 10em;
+	padding: 0;
+	margin: 0;
+	float:left;
+}
+
+#content {
+	width:100%;
+	float:left;
+}
+
+.about{
+	display: none;
+}
+
+.about p {
+	line-height: 1.4em;
+}
+
+.movies{
+	display: none;
+}
+
+.movies p {
+	line-height: 1.4em;
+}
+
+section.active{
+	display: block;
+}
+
+.movies article{
+	float: left;
+	width: 30%;
+	height:29em;
+	/*margin-left: 1em;*/
+}
+
+img{
+	width: 60%;
+	height: 60%;
+}

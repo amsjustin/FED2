@@ -1,7 +1,55 @@
-<!DOCTYPE HTML>
-<head>
-	<title>FED2</title>
-</head>
-<body>
-</body>
-</HTML>
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Web App V1, basic JavaScript Skeleton">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>My Favorite Movies</title>
+		<link rel="stylesheet" href="static/css/main.css">
+		<link rel="author" href="humans.txt">
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#movies">Movies</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main id="content">
+			<section class="about">
+				<section>
+					<header>
+						<h1 data-bind="title"></h1>
+
+						<p data-bind="myHtml"></p>
+					</header>
+				</section>
+			</section>
+
+			<section class="movies">	
+				<article>
+					<header>
+						<h1 data-bind="title"></h1>
+						<em data-bind="myHtml"></em>
+					</header>
+
+					<figure>
+						<img data-bind="myImg" alt="" />
+					</figure>
+
+					<p data-bind="description"></p>
+				</article>
+			</section>
+		</main>
+		
+		
+		<script src="static/js/vendor/xhr.js"></script>
+		<script src="static/js/vendor/routie.js"></script>
+		<script src="static/js/vendor/transparancy.min.js"></script>
+		<script src="static/js/app.js"></script>
+	</body>
+</html>
